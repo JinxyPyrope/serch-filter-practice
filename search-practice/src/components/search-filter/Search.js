@@ -11,6 +11,17 @@ const Search = () => {
     { id: 4, fruit: "Pineapple" },
     { id: 5, fruit: "Watermelon" }
   ]
+
+  const handleChange = e => {
+    e.preventDefault()
+    setSearchInput(e.target.value)
+  }
+
+  return (
+    <div>
+      <input type="text" placeholder="Testing Here" />
+    </div>
+  )
 }
 
 export default Search
