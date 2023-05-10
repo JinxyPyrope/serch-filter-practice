@@ -24,7 +24,8 @@ const Search = () => {
 
   return (
     <div>
-      <input type="text" placeholder="Testing Here" />
+      <input type="text" placeholder="Testing Here" onChange={handleChange} value={searchInput} />
+      
     </div>
   )
 }
