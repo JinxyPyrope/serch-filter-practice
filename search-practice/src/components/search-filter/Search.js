@@ -15,6 +15,11 @@ const Search = () => {
   const handleChange = e => {
     e.preventDefault()
     setSearchInput(e.target.value)
+    if (searchInput.length > 0) {
+      fruits.filter(fruit => {
+        return fruit.name.match(searchInput)
+      })
+    }
   }
 
   return (
