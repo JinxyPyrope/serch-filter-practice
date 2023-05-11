@@ -8,6 +8,7 @@ const Search = () => {
   const handleChange = e => {
     e.preventDefault()
     setSearchInput(e.target.value)
+    console.log(searchInput)
     if (searchInput.length > 0) {
       fruits.filter(fruit => {
         return fruit.match(searchInput)
@@ -18,6 +19,13 @@ const Search = () => {
   return (
     <div>
       <input type="text" placeholder="Testing Here" onChange={handleChange} value={searchInput} />
+      <table>
+        {fruits.map(fruit => (
+          <tr>
+            <td>{fruit}</td>
+          </tr>
+        ))}
+      </table>
     </div>
   )
 }
