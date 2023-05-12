@@ -16,10 +16,22 @@ const Search = () => {
 
   return (
     <div>
-      <input type="text" placeholder="Search..." />
-      {fruits.map(item => {
-        return <div> {item.fruit}</div>
-      })}
+      <input
+        type="text"
+        placeholder="Search..."
+        onChange={e => {
+          setSearchInput(e.target.value)
+        }}
+      />
+      {fruits
+        .filter(item => {
+          if (searchInput == "") {
+            return item
+          }
+        })
+        .map(item => {
+          return <div> {item.fruit}</div>
+        })}
     </div>
   )
 }
