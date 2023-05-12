@@ -27,6 +27,8 @@ const Search = () => {
         .filter(item => {
           if (searchInput == "") {
             return item
+          } else if (item.fruit.toLowerCase().includes(searchInput.toLowerCase())) {
+            return item
           }
         })
         .map(item => {
